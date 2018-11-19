@@ -1,0 +1,211 @@
+body {
+    font-family: 'Nunito', sans-serif !important;
+}
+
+.bg-body {
+    background-color: #F2F2F2;
+}
+
+.line-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05),
+    0 4px 8px 0 rgba(0, 0, 0, .05);
+}
+
+.navbar-brand h1 {
+    align-self: center;
+}
+
+.dropdown-menu .dropdown-item, .nav-item{
+    font-size: 0.8rem;
+}
+
+/* CARD BLOG */
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+.card{
+    border-radius: 0px;
+}
+
+/* CTA CODE */
+#hero {
+    background: url('../img/site/hero.jpeg') center center;
+    background-size: cover;
+    height: 300px;
+}
+
+.box-shadow {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.post-content{
+    font-size: 1.5em;
+}
+
+@media (max-width: 767px) {
+    #hero em {
+        font-size: 1.2rem;
+    }
+
+    body {
+        padding-top: 0px;
+    }
+
+    .fixed-top {
+        position: relative;
+    }
+
+    .espacamento {
+        padding-top: 10px;
+    }
+
+    .post-content{
+        font-size: 1.0em;
+    }
+
+    .carousel-caption .display-5{
+        font-size: 1.2rem;
+    }
+}
+
+.page-link{
+    color: #007bb6;
+}
+.page-link:hover {
+    color:#3295c4;
+}
+.page-item.active .page-link {
+    background-color: #007bb6;
+    border-color: #007bb6;
+}
+
+/* BOTOES SOCIAIS */
+.social-card-header {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 96px;
+}
+
+.social-card-header i {
+    font-size: 32px;
+    color: #FFF;
+}
+
+.bg-facebook {
+    background-color: #3d5e99;
+}
+
+.text-facebook {
+    color: #3d5e99;
+}
+
+.btn-facebook {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #3d5e99;
+    border-color: #3d5e99;
+}
+
+.btn-facebook:hover {
+    color: #fff;
+    background-color: #637ead;
+    border-color: #637ead;
+}
+
+.bg-linkedin {
+    background-color: #007bb6;
+}
+
+.text-linkedin {
+    color: #007bb6;
+}
+
+.link-linkedin {
+    color: #007bb6;
+    font-weight: bold;
+}
+
+.link-linkedin:hover{
+    color: #3295c4;
+    text-decoration:none;
+}
+
+.btn-linkedin {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #007bb6;
+    border-color: #1988bd;
+}
+
+.btn-linkedin:hover {
+    color: #fff;
+    background-color: #3295c4;
+    border-color: #1988bd;
+}
+
+.bg-github {
+    background-color: #333333;
+}
+
+.text-github {
+    color: #333333;
+}
+
+.btn-github {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #333333;
+    border-color: #333333;
+}
+
+.btn-github:hover {
+    color: #fff;
+    background-color: #5b5b5b;
+    border-color: #5b5b5b;
+}
+
+.bg-youtube {
+    background-color: #cc181e;
+}
+
+.text-youtube {
+    color: #cc181e;
+}
+
+.btn-youtube {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #cc181e;
+    border-color: #cc181e;
+}
+
+.btn-youtube:hover {
+    color: #fff;
+    background-color: #d6464a;
+    border-color: #d6464a;
+}
+
+.share:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.video-youtube {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video-youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
