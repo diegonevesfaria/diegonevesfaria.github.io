@@ -6,15 +6,17 @@ description: >-
   Nômade Digital e desenvolvendo APIs e criando Apps Mobile.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-lang: pt_BR
+lang: pt-BR
 
-twitter_username: jekyllrb
-github_username:  jekyll
+permalink: /artigo/:title/
+paginate: 2
+paginate_path: "/pagina/:num/"
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

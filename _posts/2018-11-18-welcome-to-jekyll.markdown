@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Bem Vindo ao Jekyll!"
+subtitle: "Como criar páginas profissionais com Jekyll"
 date:   2018-11-18 17:00:09 -0200
 categories: jekyll update
 ---

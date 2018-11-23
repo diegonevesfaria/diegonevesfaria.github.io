@@ -3,13 +3,13 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body class="bg-body">
+
     {%- include header.html -%}
 
     <div>
       {{ content }}
     </div>
-
 
     {%- include footer.html -%}
 
@@ -17,6 +17,6 @@
     <script type="text/javascript" src="{{ "/assets/js/popper.min.js" | relative_url }}"></script>
     <script type="text/javascript" src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
     <script type="text/javascript" src="{{ "/assets/js/app.js" | relative_url }}"></script>
+    <script id="dsq-count-scr" src="//diegonevesfaria.disqus.com/count.js" async></script>
   </body>
-
 </html>

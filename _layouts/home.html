@@ -1,36 +1,119 @@
 ---
 layout: default
+pagination:
+  enabled: true
 ---
 
 {%- include carousel.html -%}
+<section class="bg-body">
+  <div class="container py-3">
+    <h2 class="h4 text-dark text-uppercase pb-2 font-weight-bold">Últimas Postagens</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+        {%- if site.posts.size > 0 -%}
+          {% for post in paginator.posts %}
+        <article class="card mb-3">
+          {% if post.image %}
+          <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
+            <img class="img-fluid" src="{{ post.image | escape }}"/>
           </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          {% else %}
+          <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
+            <img class="img-fluid" src="{{base.url}}/assets/img/image-site.jpeg"/>
+          </a>
+          {% endif %}
+          <div class="m-3">
+            <h2>
+              <a class="link-linkedin" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+            <div class="mb-3">
+              {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+              <span class="text-muted mr-2"><i class="fa fa-calendar-alt"></i> {{ post.date | date: date_format }}</span>
+              <span class="text-muted"> <i class="fa fa-user"></i> {{ post.author | escape }}</span>
+            </div>
+
+            <div>
+              <p class="text-justify">{{ post.subtitle }}</p>
+              <a class="btn btn-sm btn-linkedin" href="{{ post.url | relative_url }}">Continue Lendo</a>
+            </div>
+          </div>
+        </article>
+        {%- endfor -%}
         {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+          <div class="text-center">
+              {% if paginator.previous_page %}
+                <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">Anterior</a>
+              {% endif %}
 
+              <span>Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+
+              {% if paginator.next_page %}
+                <a class="btn btn-outline-primary" href="{{ paginator.next_page_path }}">Próximo</a>
+              {% endif %}
+          </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="card px-4">
+          <div class="well">
+            <aside class="my-3">
+              <h3 class="h4 text-uppercase text-secondary font-weight-bold">Siga-nos</h3>
+              <div class="mb-2">
+                <a class="btn btn-facebook rounded-0" href="https://www.facebook.com/diegonevesfariaoficial">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a class="btn btn-linkedin rounded-0" href="https://www.linkedin.com/in/diegonevesfaria">
+                  <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a class="btn btn-github rounded-0" href="https://github.com/diegonevesfaria">
+                  <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a class="btn btn-youtube rounded-0" href="https://www.youtube.com/channel/UCLqLyfqee0VGBl_GjePrwXw">
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </aside>
+            <aside class="my-2">
+              <h3 class="h4 text-uppercase text-secondary font-weight-bold">Categorias</h3>
+              <div>
+                <ul class="list-unstyled categoria">
+                  <li><a class="link-linkedin" href="#" title="">Angular</span></li>
+                  <li><a class="link-linkedin" href="#" title="">React</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Node</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Java</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Spring Boot</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Mobile</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Docker</a></li>
+                  <li><a class="link-linkedin" href="#" title="">AWS</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Laravel</a></li>
+                  <li><a class="link-linkedin" href="#" title="">Jekyll</a></li>
+                </ul>
+              </div>
+            </aside>
+            <aside class="my-2">
+              <h3 class="d-none">Perquisar</h3>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Pesquisar">
+                <div class="input-group-append">
+                  <button class="btn btn-linkedin" type="button"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </aside>
+            <aside>
+              <a class="twitter-timeline" href="https://twitter.com/diegonevesfaria?ref_src=twsrc%5Etfw">Tweets by diegonevesfaria</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="bg-white py-3">
+  <div class="container">
+    <h2 class="h4 text-uppercase text-dark border-bottom font-weight-bold">Siga-nos nas Redes Sociais</h2>
+    <div>
+      {%- include follow.html -%}
+    </div>
+  </div>
 </div>

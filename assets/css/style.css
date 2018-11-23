@@ -118,6 +118,13 @@ body {
     border-color: #637ead;
 }
 
+.btn-twitter {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #00acee;
+    border-color: #00acee;
+}
+
 .bg-linkedin {
     background-color: #007bb6;
 }
@@ -189,6 +196,13 @@ body {
     color: #fff;
     background-color: #d6464a;
     border-color: #d6464a;
+}
+
+.btn-google-plus {
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
 }
 
 .share:hover {
