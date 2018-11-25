@@ -15,7 +15,6 @@ paginate_path: "/pagina/:num/"
 collections:
   category:
     output: true
-
   defaults:
   -
     scope:

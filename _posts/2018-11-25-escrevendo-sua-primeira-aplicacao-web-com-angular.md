@@ -67,8 +67,6 @@ $ npm install -g @angular/cli
 </code></pre>
 <b>Obs:</b> Instalamos os módulos acima comoo uma instância global para ser utilizado em outros projetos dentro da sua máquina.
  
- * TypeScript
- * Angular
   
   <pre><code>
   $ npm -v
