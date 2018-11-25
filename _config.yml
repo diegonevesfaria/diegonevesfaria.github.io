@@ -1,9 +1,8 @@
 # Site settings
 title: DIEGO NEVES FARIA
 email: diegonevesfaria@gmail.com
-description: >-
-  Um desenvolvedor Full Stack com especialização em infraestrutura e que ama tecnologias novas que nos auxiliam em nossa vida. Atualmente virando um
-  Nômade Digital e desenvolvendo APIs e criando Apps Mobile.
+description: "Um desenvolvedor Full Stack com especialização em infraestrutura e que ama tecnologias novas que nos auxiliam em nossa vida. Atualmente virando um
+  Nômade Digital e desenvolvendo APIs e criando Apps Mobile."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://diegonevesfaria.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 lang: pt-BR
