@@ -34,7 +34,7 @@ pagination:
             </div>
 
             <div>
-              <p class="text-justify">{{ post.subtitle }}</p>
+              <p class="text-justify">{{ post.description }}</p>
               <a class="btn btn-sm btn-linkedin" href="{{ post.url | relative_url }}">Continue Lendo</a>
             </div>
           </div>
@@ -42,69 +42,20 @@ pagination:
         {%- endfor -%}
         {%- endif -%}
 
-          <div class="text-center">
-              {% if paginator.previous_page %}
-                <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">Anterior</a>
-              {% endif %}
+        <div class="text-center mb-2">
+            {% if paginator.previous_page %}
+              <a class="btn btn-outline-primary" href="{{ paginator.previous_page_path }}">Anterior</a>
+            {% endif %}
 
-              <span>Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+            <span>Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
 
-              {% if paginator.next_page %}
-                <a class="btn btn-outline-primary" href="{{ paginator.next_page_path }}">Próximo</a>
-              {% endif %}
-          </div>
+            {% if paginator.next_page %}
+              <a class="btn btn-outline-primary" href="{{ paginator.next_page_path }}">Próximo</a>
+            {% endif %}
+        </div>
       </div>
       <div class="col-sm-12 col-md-4">
-        <div class="card px-4">
-          <div class="well">
-            <aside class="my-3">
-              <h3 class="h4 text-uppercase text-secondary font-weight-bold">Siga-nos</h3>
-              <div class="mb-2">
-                <a class="btn btn-facebook rounded-0" href="https://www.facebook.com/diegonevesfariaoficial">
-                  <i class="fab fa-facebook fa-2x"></i>
-                </a>
-                <a class="btn btn-linkedin rounded-0" href="https://www.linkedin.com/in/diegonevesfaria">
-                  <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a class="btn btn-github rounded-0" href="https://github.com/diegonevesfaria">
-                  <i class="fab fa-github fa-2x"></i>
-                </a>
-                <a class="btn btn-youtube rounded-0" href="https://www.youtube.com/channel/UCLqLyfqee0VGBl_GjePrwXw">
-                  <i class="fab fa-youtube fa-2x"></i>
-                </a>
-              </div>
-            </aside>
-            <aside class="my-2">
-              <h3 class="h4 text-uppercase text-secondary font-weight-bold">Categorias</h3>
-              <div>
-                <ul class="list-unstyled categoria">
-                  <li><a class="link-linkedin" href="#" title="">Angular</span></li>
-                  <li><a class="link-linkedin" href="#" title="">React</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Node</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Java</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Spring Boot</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Mobile</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Docker</a></li>
-                  <li><a class="link-linkedin" href="#" title="">AWS</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Laravel</a></li>
-                  <li><a class="link-linkedin" href="#" title="">Jekyll</a></li>
-                </ul>
-              </div>
-            </aside>
-            <aside class="my-2">
-              <h3 class="d-none">Perquisar</h3>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Pesquisar">
-                <div class="input-group-append">
-                  <button class="btn btn-linkedin" type="button"><i class="fas fa-search"></i></button>
-                </div>
-              </div>
-            </aside>
-            <aside>
-              <a class="twitter-timeline" href="https://twitter.com/diegonevesfaria?ref_src=twsrc%5Etfw">Tweets by diegonevesfaria</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </aside>
-          </div>
-        </div>
+        {% include aside.html%}
       </div>
     </div>
   </div>

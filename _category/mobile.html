@@ -1,0 +1,48 @@
+---
+layout: default
+title: Mobile
+description: 'Crie aplicativos para Android e IOS com o poderoso React-Native.'
+permalink: "/categoria/mobile"
+---
+
+<section class="bg-body">
+    <header class="text-white bg-linkedin py-3 mb-3">
+        <div class="text-center text-white">
+            <h1 class="text-center pt-3" itemprop="name headline">{{ page.title | escape }}</h1>
+            <p class="pb-3" itemprop="name alternativeHeadline">{{ page.description | escape }}</p>
+        </div>
+    </header>
+    <div class="container py-3">
+        <div class="row">
+            {% for post in site.categories[page.title] %}
+            <div class="col-sm-12 col-md-4">
+                <article class="card mb-3">
+                    {% if post.image %}
+                    <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
+                        <img class="img-fluid" src="{{ post.image | escape }}"/>
+                    </a>
+                    {% else %}
+                    <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
+                        <img class="img-fluid" src="{{base.url}}/assets/img/image-site.jpeg"/>
+                    </a>
+                    {% endif %}
+                    <div class="m-3">
+                        <h2 class="h5">
+                            <a class="link-linkedin" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                        </h2>
+                        <div class="mb-3">
+                            {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+                            <span class="text-muted mr-2"><i class="fa fa-calendar-alt"></i> {{ post.date | date: date_format }}</span>
+                        </div>
+
+                        <div>
+                            <p class="text-justify">{{ post.description }}</p>
+                            <a class="btn btn-sm btn-linkedin" href="{{ post.url | relative_url }}">Continue Lendo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>

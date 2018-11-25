@@ -3,9 +3,12 @@ layout: post ## Layout a ser utilizado
 date: 2018-11-14 09:08:55 -0200 ## Data e Hora da Criação do Post
 image: /assets/img/posts/jekyll-github-sites.jpg ## Imagem de capa
 title: "Configurando Ambiente de Desenvolvimento React" ## Mínimo de 35 Caracteres e Máximo de 50.
-subtitle: "Um tutorial para você que está iniciando no universo de React Native." ## Mínimo de 35 Caracteres e Máximo de 80.
+description: "Um tutorial para você que está iniciando no universo de React Native." ## Mínimo de 35 Caracteres e Máximo de 80.
 author: Diego Neves Faria ## Autor do Post
-categories: [Front-End, Mobile, React] # Categorias do Post
+categories: 
+    - "Front-End"
+    - "Back-End"
+    - "Mobile"
 youtube:  ## Somente final do links Exemplo: vlDzYIIOYmM
 tags: ## Tags do Post
  - Front-End

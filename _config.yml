@@ -9,8 +9,19 @@ url: "https://diegonevesfaria.com.br" # the base hostname & protocol for your si
 lang: pt-BR
 
 permalink: /artigo/:title/
-paginate: 2
+paginate: 3
 paginate_path: "/pagina/:num/"
+
+collections:
+  category:
+    output: true
+  defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 # Build settings
 markdown: kramdown

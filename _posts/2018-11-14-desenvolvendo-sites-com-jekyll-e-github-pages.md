@@ -3,9 +3,12 @@ layout: post ## Layout a ser utilizado
 date: 2018-11-14 09:08:55 -0200 ## Data e Hora da Criação do Post
 image: /assets/img/posts/jekyll-github-sites.jpg ## Imagem de capa
 title: "Desenvolvendo Sites com Jekyll e Github Pages" ## Mínimo de 35 Caracteres e Máximo de 50.
-subtitle: "Crie sites incríveis e hospede gratuitamente no Github" ## Mínimo de 35 Caracteres e Máximo de 80.
+description: "Crie sites incríveis e hospede gratuitamente no Github" ## Mínimo de 35 Caracteres e Máximo de 80.
 author: Diego Neves Faria ## Autor do Post
-categories: [ruby, html5, css3] # Categorias do Post
+categories: 
+    - "Front-End"
+    - "Back-End"
+    - "Mobile"
 youtube: vlDzYIIOYmM
 tags: ## Tags do Post
  - Jekyll
