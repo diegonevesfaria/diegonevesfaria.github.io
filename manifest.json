@@ -1,0 +1,22 @@
+{
+  "name": "Diego Neves Faria Blog",
+  "short_name": "DNF",
+  "theme_color": "#007bb6",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "pt-BR",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/img/diegonevesfaria.png",
+      "sizes": "512x512",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/img/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
+}

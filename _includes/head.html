@@ -6,6 +6,7 @@
     <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
 
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007bb6"/>
 
     <!-- Google Authorship Markup -->
     <meta name="google-site-verification" content="fBKCcL6LCchFVXSAv7RyOSuwlRDCpDkCyo7eYRxvm1w"/>
@@ -46,9 +47,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" type="image/x-icon"/>
 
-    <!-- Android Lolipop Theme Color -->
-    <meta name="theme-color" content="#007bb6">
-
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"/>
 
@@ -59,6 +57,8 @@
           integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
           crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+
+    <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
 
     {%- feed_meta -%}
     <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -20,7 +20,7 @@ pagination:
           </a>
           {% else %}
           <a href="{{ post.url | relative_url }}" title="{{ post.title | escape }}">
-            <img class="img-fluid" src="{{base.url}}/assets/img/image-site.jpeg"/>
+            <img class="img-fluid" src="{{base.url}}/assets/img/image-site.webp" alt="{{ post.title | escape }}"/>
           </a>
           {% endif %}
           <div class="m-3">

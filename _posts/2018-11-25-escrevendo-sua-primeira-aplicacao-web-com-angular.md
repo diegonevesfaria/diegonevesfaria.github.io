@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2018-11-25 09:00:00 -0200
-image: /assets/img/posts/angular.png
+image: /assets/img/posts/angular.webp
 title: "Escrevendo sua Primeira Aplicação Web com Angular"
 description: "Neste artigo, vou ensinar vocês a criarem um aplicativo que permita ao usuário postar um artigo (com um título e o URL) e depois poder votar qual artigo mais popular."
 author: Diego Neves Faria
